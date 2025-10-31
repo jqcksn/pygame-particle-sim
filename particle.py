@@ -22,3 +22,4 @@ class Particle:
         else:
             color = random.choice(colors)
         return Particle((xpos, ypos), (xvel,yvel), color, size)
+
