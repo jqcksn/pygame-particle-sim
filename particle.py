@@ -22,4 +22,11 @@ class Particle:
         else:
             color = random.choice(colors)
         return Particle((xpos, ypos), (xvel,yvel), color, size)
-
+    def toro(p1, p2, width, height):
+        dx = p2.position.x - p1.position.x
+        dy = p2.position.y - p1.position.y
+        if dx > width / 2:  dx -= width
+        if dx < -width / 2: dx += width
+        if dy > height / 2: dy -= height
+        if dy < -height / 2: dy += height
+        return pygame.Vector2(dx, dy)
